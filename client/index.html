@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./index.css" />
+		<title>Socket test client</title>
+	</head>
+	<body>
+		<script type="module" src="./client.js"></script>
+
+		<script></script>
+
+		<section>
+			<div id="send-test">
+				<h2>"send-test" event:</h2>
+
+				<input id="send-test-txt" type="text" />
+				<button id="send-test-btn">Send</button>
+			</div>
+		</section>
+
+		<section>
+			<div id="response-test">
+				<h2>"response-test" event:</h2>
+
+				<input id="response-test-txt" type="text" />
+				<button id="response-test-btn">Send</button>
+				<textarea id="response-test-rslt"></textarea>
+			</div>
+		</section>
+
+		<section>
+			<div id="response-json-test">
+				<h2>"response-json-test" event:</h2>
+
+				<input id="response-test-json-txt" type="text" />
+				<button id="response-test-json-btn">Send</button>
+				<textarea id="response-test-json-rslt"></textarea>
+			</div>
+		</section>
+
+		<section>
+			<div id="help">
+				<h2>List of all events:</h2>
+
+				<ul>
+					<li>
+						<h3>send-test:</h3>
+						<p>send data and server will log it in the console</p>
+					</li>
+
+					<li>
+						<h3>response-test:</h3>
+						<p>
+							send data and server will log it in the console.
+							also server will send back a string of data
+						</p>
+					</li>
+
+					<li>
+						<h3>response-json-test:</h3>
+						<p>
+							send data and server will log it in the console.
+							also server will send back data in form of json
+						</p>
+					</li>
+				</ul>
+			</div>
+		</section>
+	</body>
+</html>
