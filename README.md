@@ -16,7 +16,7 @@
 
 <hr/>
 
-## Requests:
+## Events:
 
 -   `send-test`: you can send sample data and check if its
     received
