@@ -1,0 +1,21 @@
+{
+	"name": "echo-server",
+	"version": "1.0.0",
+	"description": "This project provides an echo server for the user to be able to connect via socket and log the data and connections",
+	"main": "server.js",
+	"scripts": {
+		"start": "nodemon server.js"
+	},
+	"keywords": [
+		"socket.io",
+		"echo",
+		"server"
+	],
+	"author": "M. M. Hejazi",
+	"license": "ISC",
+	"dependencies": {
+		"@socket.io/admin-ui": "^0.3.0",
+		"nodemon": "^2.0.16",
+		"socket.io": "^4.5.0"
+	}
+}
