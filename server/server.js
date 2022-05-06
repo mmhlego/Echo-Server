@@ -4,7 +4,7 @@ const response = require("./../response");
 
 const io = require("socket.io")(configurations["SERVER_PORT"], {
 	cors: {
-		origin: [configurations["CLIENT_ADDRESSES"], "https://admin.socket.io"],
+		origin: configurations["CLIENT_ADDRESSES"],
 	},
 });
 
