@@ -1,16 +1,10 @@
-// ====================================================
-
-const PORT = 9000;
-const CLIENT_ADDRESS = "http://localhost:5032";
-
-// ====================================================
-
+const configurations = require("./../configurations.json");
 const { instrument } = require("@socket.io/admin-ui");
-const response = require("./response");
+const response = require("./../response");
 
-const io = require("socket.io")(PORT, {
+const io = require("socket.io")(configurations["SERVER_PORT"], {
 	cors: {
-		origin: [CLIENT_ADDRESS, "https://admin.socket.io"],
+		origin: [configurations["CLIENT_ADDRESSES"], "https://admin.socket.io"],
 	},
 });
 

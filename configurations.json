@@ -1,0 +1,4 @@
+{
+	"SERVER_PORT": 9000,
+	"CLIENT_ADDRESSES": ["http://localhost:9001"]
+}
