@@ -9,14 +9,27 @@ const io = require("socket.io")(configurations["SERVER_PORT"], {
 });
 
 io.on("connection", (socket) => {
-	console.log("New device connected: ", socket.id);
+	console.log("-------------------------------------------");
+	console.log("New device connected");
+	console.table({
+		ID: socket.id,
+		IP: socket.handshake.address,
+		Address: socket.handshake.headers.origin,
+		Rooms: socket.rooms,
+		Time: socket.handshake.time,
+		// Device: socket.handshake.headers["user-agent"],
+	});
 
 	socket.on("send-test", (data) => {
+		socket.broadcast.emit("send-test", data);
+
 		logData(data);
 	});
 
 	socket.on("response-test", (data) => {
 		logData(data);
+
+		socket.broadcast.emit("response-test", data);
 
 		socket.emit("response-test", `This is a sample response for "${data}"`);
 		console.log("> Response has been sent");
@@ -24,6 +37,8 @@ io.on("connection", (socket) => {
 
 	socket.on("response-json-test", (data) => {
 		logData(data);
+
+		socket.broadcast.emit("response-json-test", data);
 
 		socket.emit("response-json-test", response);
 		console.log("> Response has been sent");

@@ -1,8 +1,7 @@
-# Version 1.1
+# Version 1.2
 
--   Removed CORS: Now any connection will be able to connect to you server
-
--   Added admin panel documentations
+-   Better log on connection
+-   Now the data from each client, get broadcasted to all clients and enables the "Forward Server" functionality.
 
 # Instructions
 
